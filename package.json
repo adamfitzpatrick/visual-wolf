@@ -1,4 +1,16 @@
 {
   "name": "visual-wolf",
-  "packageManager": "yarn@4.2.2"
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Adam Fitzpatrick",
+    "email": "adam@stepinto.io"
+  },
+  "packageManager": "yarn@4.5.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "typescript": "^5.6.2"
+  }
 }
