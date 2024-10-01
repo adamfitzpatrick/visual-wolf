@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Header = void 0;
+var header_1 = require("./lib/header");
+Object.defineProperty(exports, "Header", { enumerable: true, get: function () { return header_1.Header; } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFFQSx1Q0FBc0M7QUFBN0IsZ0dBQUEsTUFBTSxPQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRE9NQXR0cmlidXRlcyB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IEhlYWRlciB9IGZyb20gJy4vbGliL2hlYWRlcic7XG5leHBvcnQgeyBIZWFkZXIgfSBmcm9tICcuL2xpYi9oZWFkZXInO1xuXG50eXBlIEN1c3RvbUVsZW1lbnQ8VD4gPSBQYXJ0aWFsPFQgJiBET01BdHRyaWJ1dGVzPFQ+ICYgeyBjaGlsZHJlbjogYW55IH0+O1xuXG5kZWNsYXJlIGdsb2JhbCB7XG4gIG5hbWVzcGFjZSBKU1gge1xuICAgIGludGVyZmFjZSBJbnRyaW5zaWNFbGVtZW50cyB7XG4gICAgICBbJ3Z3b2xmLWhlYWRlciddOiBDdXN0b21FbGVtZW50PEhlYWRlcj47XG4gICAgfVxuICB9XG59XG4iXX0=

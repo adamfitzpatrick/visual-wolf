@@ -1,0 +1,25 @@
+import React from "react";
+
+export function Player() {
+  return (
+    <svg
+      className='hex'
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 53 44"
+      style={{
+        fill: 'none',
+        stroke: 'rgb(27, 105, 189)',
+        strokeWidth: '0.5'
+      }}
+    >
+      <g id='sword' transform='translate(-6 -6.5) rotate(-50)' transform-origin='10 10'>
+        <circle cx='10' cy='8.1' r='2' />
+        <path d='M 9,10 l -0.5,11 h 3 l -0.5,-11 z' />
+        <path d='M 1,21 l 18,0 v 1.5 l -18,0 z' />
+        <path d='M 8.5,22.5 c 0,46 0,48 1.5,50 c 1.5,-2 1.5,-4 1.5,-50 z' />
+        <line x1='10' y1='24' x2='10' y2='65' />
+      </g>
+    </svg>
+  )
+}

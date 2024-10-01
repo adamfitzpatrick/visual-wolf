@@ -1,0 +1,27 @@
+.left-right-template {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  width: var(--layout-standard-width);
+  background-color: var(--color-light-grey);
+  border-radius: var(--outside-border-radius);
+  box-shadow: var(--shadow-heavy-right), var(--shadow-heavy-left);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.left-right-template>header {
+  width: var(--layout-standard-width);
+  height: var(--header-height);
+  background-color: var(--color-background);
+}
+
+.left-right-template>section {
+  min-width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+}
+
+.left-right-template>main {
+  flex-grow: 1;
+  padding: var(--main-inset);
+}
