@@ -90,45 +90,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 3rem;
+  padding: 0 10rem;
   box-sizing: border-box;
   align-items: center;
-}
-
-.role-switch {
-  position: relative;
-  height: 200px;
-  width: 100px;
-  border: 1px solid rgb(242, 81, 1);
-  border-radius: 1rem;
-  box-sizing: border-box;
-  overflow: hidden;
-  box-shadow: 5px 5px 10px 1px rgb(0, 0, 0);
-  margin-right: 10rem;
-}
-
-.role-text {
-  margin: 1.5rem 0;
-  text-align: center;
-  letter-spacing: 0.2rem;
-}
-
-.role-slider {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 90px;
-  height: 35px;
-  background-color: rgb(200, 200, 200);
-  border-radius: 1rem;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 3px 1px rgb(40, 40, 40);
-  color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.2rem;
-  text-shadow: 1px 1px 1px 1px rgb(40, 40, 40);
 }
 
 .action-sequence {
@@ -168,4 +132,10 @@
   width: 10rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+
+.illustration {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
 }

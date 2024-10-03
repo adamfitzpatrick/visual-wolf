@@ -18,14 +18,6 @@ function firstTimeHeader() {
 function firstTimeMain() {
   return (
     <div className='workflow'>
-      <div>
-        <div className='role-switch'>
-          <Storyteller width='100px' classes={['role-switch-background']} />
-          <div className='role-slider'>
-            ROLE
-          </div>
-        </div>
-      </div>
       <div className='action-sequence'>
         <div className='action-step'>
           <Hexes width='10rem' top={-14} color={'rgb(242, 81, 1)'} />
@@ -37,7 +29,7 @@ function firstTimeMain() {
         </div>
         <div className='action-step'>
           <Hexes width='10rem' top={-14} color={'rgb(214, 255, 246)'} />
-          <div className='action-text light-green'>Entities</div>
+          <div className='action-text light-green'>Entity</div>
         </div>
         <div className='action-step jello'>
           <Hexes width='10rem' top={-14} color={'rgb(133, 237, 213)'} />
@@ -80,6 +72,9 @@ export default function App() {
           <Hexes bottom={411} right={209} />
         </div>
         {firstTimeMain()}
+        <div className='illustration'>
+          <Storyteller width='1440px'/>
+        </div>
       </div>
     </div>
   );
