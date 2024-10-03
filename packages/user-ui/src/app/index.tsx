@@ -3,15 +3,21 @@ import { ProfileOutlined } from '@ant-design/icons';
 import './app.css';
 import { Hexes } from '../atoms/hexes';
 import { Storyteller } from '../atoms/storyteller-icon';
+import { Fragment } from 'react/jsx-runtime';
 
 function firstTimeHeader() {
   return (
-    <div className='nav'>
-      <div className='nav-link active'>create</div>
-      <div className='nav-link'>manage</div>
-      <div className='nav-link'>play</div>
-      <div><span className="account-button material-symbols-outlined">manage_accounts</span></div>
-    </div>
+    <Fragment>
+      <div className='role-toggle'>
+        <div className='role-storyteller'>storyteller</div>
+      </div>
+      <div className='nav'>
+        <div className='nav-link active'>create</div>
+        <div className='nav-link'>manage</div>
+        <div className='nav-link'>play</div>
+        <div><span className="account-button material-symbols-outlined">manage_accounts</span></div>
+      </div>
+      </Fragment>
   );
 }
 
@@ -73,7 +79,7 @@ export default function App() {
         </div>
         {firstTimeMain()}
         <div className='illustration'>
-          <Storyteller width='1440px'/>
+          <Storyteller width='1440px' />
         </div>
       </div>
     </div>

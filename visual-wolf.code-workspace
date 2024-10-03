@@ -3,11 +3,14 @@
     "path": ".",
     "name": "visual-wolf"
   }, {
-    "path": "./packages/user-ui",
-    "name": "user-ui"
+    "path": "./packages/docs",
+    "name": "docs"
   }, {
     "path": "./packages/components",
     "name": "components"
+  }, {
+    "path": "./packages/user-ui",
+    "name": "user-ui"
   }],
   "settings": {
     "files.exclude": {

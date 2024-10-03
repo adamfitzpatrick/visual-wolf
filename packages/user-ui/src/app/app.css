@@ -40,6 +40,28 @@
   text-shadow: 10px 10px 8px black;
 }
 
+.role-toggle {
+  position: absolute;
+  top: 70px;
+  left: 400px;
+  display: flex;
+  font-size: 0.7rem;
+}
+
+.role-toggle>* {
+  padding: .75rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+}
+
+.role-storyteller {
+  margin: 0 2rem;
+  background-color: rgb(81, 34, 10);
+  border-radius: 2rem;
+  border: 1px solid rgb(242, 81, 1);
+}
+
 .nav {
   position: absolute;
   right: 48px;
