@@ -3,12 +3,13 @@ import { ProfileOutlined } from '@ant-design/icons';
 import './app.css';
 import { Hexes } from '../atoms/hexes';
 import { Storyteller } from '../atoms/storyteller-icon';
-import { Player } from '../atoms/player';
-import { Fragment } from 'react/jsx-runtime';
 
 function firstTimeHeader() {
   return (
     <div className='nav'>
+      <div className='nav-link active'>create</div>
+      <div className='nav-link'>manage</div>
+      <div className='nav-link'>play</div>
       <div><span className="account-button material-symbols-outlined">manage_accounts</span></div>
     </div>
   );
@@ -16,32 +17,33 @@ function firstTimeHeader() {
 
 function firstTimeMain() {
   return (
-    <Fragment>
-      <div className='role-selector'>
-        <div className='instructions'>Choose your role</div>
-        <div className='storyteller'>
-          <Storyteller />
-          <div>Storyteller</div>
-        </div>
-        <div className='player'>
-          <Player />
-          <div>Player</div>
+    <div className='workflow'>
+      <div>
+        <div className='role-switch'>
+          <Storyteller width='100px' classes={['role-switch-background']} />
+          <div className='role-slider'>
+            ROLE
+          </div>
         </div>
       </div>
-    </Fragment>
-  );
-}
-function storytellerLandingHeader() {
-  return (
-    <div className='nav'>
-      <div><span className="account-button material-symbols-outlined">manage_accounts</span></div>
-    </div>
-  );
-}
-
-function storytellerLandingMain() {
-  return (
-    <div>
+      <div className='action-sequence'>
+        <div className='action-step'>
+          <Hexes width='10rem' top={-14} color={'rgb(242, 81, 1)'} />
+          <div className='action-text orange'>Game</div>
+        </div>
+        <div className='action-step'>
+          <Hexes width='10rem' top={-14} color={'rgb(68, 148, 129)'} />
+          <div className='action-text green'>Map</div>
+        </div>
+        <div className='action-step'>
+          <Hexes width='10rem' top={-14} color={'rgb(214, 255, 246)'} />
+          <div className='action-text light-green'>Entities</div>
+        </div>
+        <div className='action-step jello'>
+          <Hexes width='10rem' top={-14} color={'rgb(133, 237, 213)'} />
+          <div className='action-text'>Assemble</div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -71,6 +73,11 @@ export default function App() {
           <Hexes bottom={88} right={22} />
           <Hexes bottom={195} right={-40} />
           <Hexes bottom={303} right={22} />
+          <Hexes bottom={411} right={84} />
+          <Hexes bottom={519} right={22} />
+          <Hexes bottom={519} right={146} />
+          <Hexes bottom={519} right={270} />
+          <Hexes bottom={411} right={209} />
         </div>
         {firstTimeMain()}
       </div>

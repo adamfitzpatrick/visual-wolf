@@ -17,12 +17,15 @@
 }
 
 .header {
+  position: absolute;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 48px;
+  padding: 48px;
   font-size: 20px;
+  box-sizing: border-box;
 }
 
 .account-button {
@@ -38,14 +41,33 @@
 }
 
 .nav {
+  position: absolute;
+  right: 48px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 500px;
+  align-items: center;
+  font-size: 0.9rem;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .nav>* {
-  margin: 0 32px;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.nav-link.active {
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .main {
@@ -56,82 +78,94 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-
+  pointer-events: none;
   font-family: 'Raleway';
 }
 
-.role-selector {
+.workflow {
+  position: absolute;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  text-transform: uppercase;
-  width: 650px;
-}
-
-.role-selector>.instructions {
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 2rem 0;
-  letter-spacing: 1.2rem;
-  text-align: center;
-}
-
-.role-selector>.storyteller, .role-selector>.player {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 275px;
-  width: 300px;
-  border-radius: 1rem;
-  border: 2px solid;
-  box-shadow: 5px 5px 10px 2px black;
-  padding: 2rem 0;
-  letter-spacing: 0.4rem;
+  height: 100%;
+  padding: 0 3rem;
   box-sizing: border-box;
+  align-items: center;
 }
 
-.role-selector>.storyteller {
-  border-color: rgb(242, 81, 1);
-}
-
-.role-selector>.storyteller:hover {
-  background-color: rgba(242, 81, 1, 0.05);
-}
-
-.role-selector>.player {
-  border-color: rgb(27, 105, 189);
-}
-
-.role-selector>.player:hover {
-  background-color: rgba(27, 105, 189, 0.1);
-}
-
-.role-toggle-wrapper {
-  display: flex;
-}
-
-.role-toggle {
-  margin: 0 1rem;
-  height: 50;
+.role-switch {
+  position: relative;
+  height: 200px;
   width: 100px;
   border: 1px solid rgb(242, 81, 1);
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
+  border-radius: 1rem;
   box-sizing: border-box;
-  padding: 4px;
-  padding-right: 18px;
-  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px 1px rgb(0, 0, 0);
+  margin-right: 10rem;
 }
 
-.toggle-button {
-  height: 34px;
-  width: 34px;
-  border-radius: 17px;
-  background-color: rgb(187, 187, 187);
-  border: 3px solid rgb(100, 100, 100);
+.role-text {
+  margin: 1.5rem 0;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.role-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 90px;
+  height: 35px;
+  background-color: rgb(200, 200, 200);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px 1px rgb(40, 40, 40);
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+  letter-spacing: 0.2rem;
+  text-shadow: 1px 1px 1px 1px rgb(40, 40, 40);
+}
+
+.action-sequence {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.action-step {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+}
+
+.action-text.orange {
+  color: rgb(241, 81, 1);
+}
+
+.action-text.green {
+  color: rgb(68, 148, 129);
+}
+
+.action-text.light-green {
+  color: rgb(214, 255, 246);
+}
+
+.action-step.jello {
+  color: rgb(133, 237, 213);
+}
+
+.action-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
