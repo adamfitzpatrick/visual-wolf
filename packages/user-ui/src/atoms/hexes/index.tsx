@@ -9,7 +9,7 @@ interface HexProps {
   color?: string;
   zIndex?: number;
   fixed?: boolean;
-  filter?: string;
+  strokeWidth?: string;
 }
 
 const getHex = (
@@ -21,7 +21,7 @@ const getHex = (
   color?: string,
   zIndex?: number,
   fixed?: boolean,
-  filter?: string
+  strokeWidth?: string
 ) => (
   <svg
     className='hex'
@@ -36,19 +36,18 @@ const getHex = (
       bottom,
       right,
       zIndex,
-      filter
+      strokeWidth
     }}
   >
     <path id='vert-hex' transform='translate(0.3,5.5)'
       d='M 0 0 l 8.66 -5 l 8.66 5 v 10 l -8.66 5 l -8.66 -5 v -10 z'
       fill='none'
       stroke={color}
-      strokeWidth='0.5'
     />
   </svg>
 );
 
-export function Hexes({ width, top, left, bottom, right, color, zIndex, fixed, filter }: HexProps) {
+export function Hexes({ width, top, left, bottom, right, color, zIndex, fixed, strokeWidth }: HexProps) {
   return getHex(
     width || '8rem',
     top, 
@@ -58,6 +57,6 @@ export function Hexes({ width, top, left, bottom, right, color, zIndex, fixed, f
     color || '#333333',
     zIndex || 0,
     fixed,
-    filter || 'none'
+    strokeWidth || '0.5'
   );
 }
