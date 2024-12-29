@@ -26,6 +26,7 @@
     "jest.disabledWorkspaceFolders": [
       "visual-wolf"
     ],
-    "typescript.tsdk": "visual-wolf/.yarn/sdks/typescript/lib"
+    "typescript.tsdk": "visual-wolf/.yarn/sdks/typescript/lib",
+    "liveServer.settings.multiRootWorkspaceName": "visual-wolf"
   }
 }

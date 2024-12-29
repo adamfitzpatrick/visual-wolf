@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  font-family: 'Raleway';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(140deg,
-    rgb(44, 44, 44) 0%,
-    rgb(38, 38, 38) 20%,
-    rgb(33, 33, 33) 40%,
-    rgb(28, 28, 28) 60%,
-    rgb(25, 25, 25) 80%,
-    rgb(23, 23, 23) 90%,
-    rgb(21, 21, 21) 95%,
-    rgb(20, 20, 20) 100%)
+  margin: 0;
+  padding: 0;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
