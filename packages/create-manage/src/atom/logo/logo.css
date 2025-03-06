@@ -1,0 +1,14 @@
+.logo {
+  color: rgb(225, 80, 0);
+  margin: 0;
+  font-family: Pirata One;
+  text-shadow: 5px 5px 8px rgb(0, 0, 0);
+}
+
+.logo.white {
+  color: rgb(255, 255, 255);
+}
+
+.logo.flat {
+  text-shadow: none;
+}

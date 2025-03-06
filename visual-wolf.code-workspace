@@ -9,8 +9,8 @@
     "path": "./packages/components",
     "name": "components"
   }, {
-    "path": "./packages/user-ui",
-    "name": "user-ui"
+    "name": "create-manage",
+    "path": "./packages/create-manage"
   }],
   "settings": {
     "files.exclude": {
@@ -26,7 +26,7 @@
     "jest.disabledWorkspaceFolders": [
       "visual-wolf"
     ],
-    "typescript.tsdk": "visual-wolf/.yarn/sdks/typescript/lib",
-    "liveServer.settings.multiRootWorkspaceName": "visual-wolf"
+    "emmet.showExpandedAbbreviation": "never",
+    "typescript.tsdk": "visual-wolf/node_modules/typescript/lib"
   }
 }
