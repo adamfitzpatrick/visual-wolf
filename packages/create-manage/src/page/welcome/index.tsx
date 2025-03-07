@@ -17,7 +17,6 @@ export function Welcome() {
   const goLogin = () => {
     window.location.href = LOGIN_URL;
   }
-
   return (
     <div className='welcome'>
       <div className='welcome-text'>

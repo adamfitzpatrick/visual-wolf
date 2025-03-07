@@ -12,10 +12,10 @@ export function MapSymbol(props: PropsWithoutRef<MapProps>) {
   const symbolStyle = { width: size };
 
   return (
-    <svg className="map-symbol symbol" style={symbolStyle} viewBox="0 0 85 85" xmlns="http://www.w3.org/2000/svg">
+    <svg className="map-symbol symbol" style={symbolStyle} viewBox="-10 -10 100 100" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <filter id="shadow-map">
-          <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={stroke} />
+          <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor={stroke} />
         </filter>
       </defs>
       <g transform="translate(4,0)" className='symbol__shadowed'>

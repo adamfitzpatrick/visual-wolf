@@ -11,54 +11,47 @@ export function EntitySymbol(props: PropsWithoutRef<EntityProps>) {
   const symbolStyle = { width: size };
 
   return (
-    <svg className="map-symbol symbol" style={symbolStyle} viewBox="0 0 210 210">
-      <defs>
-        <filter id="shadow-entity">
-          <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={stroke} />
-        </filter>
-      </defs>
-      <g className='symbol__shadowed' transform="translate(0,-60),scale(1.1, 1.1)">
-        <path
+    <svg
+      className='entity-symbol symbol'
+      style={symbolStyle}
+    viewBox="-10 -5 150 160">
+    <defs>
+      <filter id="shadow-entity">
+        <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={stroke}/>
+      </filter>
+      <path
+        id="skull_path"
+          transform="scale(1,.8)"
           fill={stroke}
-          d="M 105,61
-         V 160
-         c 2,0 23,13 10,25
-          -3,2 -6,0 -10,0
-          0,0 0,16 0,21
-          4,0 6,0 12,0
-          2,7 4,18 5,29
-          8,-12 10,-23 9,-27
-          21,-4 -1,-30 11,-24
-          15,6 31,-4 21,-24
-          -3,-7 4,-19 4,-23
-          0,-5 -3,-7 -3,-14
-          -1,-17 -10,-61 -61,-62
-         z
-         m 28,79
-         c 16,-11 20,0 20,5 0,6 -3,16 -12,18 -8,1 -18,0 -20,-6 -2,-7 5,-12.06235 12,-17
-         z" />
-        <path
-          fill={stroke}
-          transform-origin="center"
-          transform="scale(-1,1)"
-          d="M 105,61
-         V 160
-         c 2,0 23,13 10,25
-          -3,2 -6,0 -10,0
-          0,0 0,16 0,21
-          4,0 6,0 12,0
-          2,7 4,18 5,29
-          8,-12 10,-23 9,-27
-          21,-4 -1,-30 11,-24
-          15,6 31,-4 21,-24
-          -3,-7 4,-19 4,-23
-          0,-5 -3,-7 -3,-14
-          -1,-17 -10,-61 -61,-62
-         z
-         m 28,79
-         c 16,-11 20,0 20,5 0,6 -3,16 -12,18 -8,1 -18,0 -20,-6 -2,-7 5,-12.06235 12,-17
-         z" />
-      </g>
-    </svg>
+          d="M 105,42
+            v 100
+            c 3,0 23,14 10,25
+            c -3,3 -7,0 -10,0
+            c 0,0 0,16 0,22
+            c 4,0 7,0 13,0
+            c 3,7 5,18 6,29
+            c 9,-13 11,-23 9,-27
+            c 21,-5 -1,-30 12,-25
+            c 16,7 32,-5 21,-24
+            c -4,-7 5,-20 5,-24
+            c -0,-6 -3,-7 -4,-15
+            c -1,-18 -10,-61 -61,-62
+            z
+            m 28,80
+            c 16,-12 20,0 21,5
+            c 1,6 -3,16 -12,18
+            c -8,2 -18,0 -21,-6
+            c -3,-8 5,-12 12,-17
+            z"
+          />
+    </defs>
+      <g
+       className='symbol__shadowed'
+        id="g2"
+        transform="translate(-45,-30)">
+          <use href="#skull_path" />
+          <use href="#skull_path" transform="scale(-1,1),translate(-71,0)" transform-origin="center"/>
+          </g>
+          </svg>
   )
 }

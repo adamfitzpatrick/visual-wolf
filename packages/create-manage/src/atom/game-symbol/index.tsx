@@ -15,10 +15,7 @@ export function GameSymbol(props: PropsWithoutRef<GameSymbolProps>) {
     <svg
       className='game-symbol symbol'
       style={symbolStyle}
-      viewBox="0 0 230 250"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink">
+      viewBox="-5 0 240 250">
       <defs>
         <filter id="shadow-game">
           <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={stroke}/>
