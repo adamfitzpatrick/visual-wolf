@@ -40,27 +40,26 @@ export const router = createBrowserRouter([{
     path: loginPath[1],
     loader: loginLoader
   }, {
-    path: createPath[0],
+    path: '/authenticated',
     loader: privateRouteLoader,
     children: [{
       index: true,
-      loader: async () => redirect(createPath.join('/'))
+      loader: async () => redirect('/authenticated/create')
     }, {
-      path: createPath[1],
+      path: 'create',
       element: <Create />,
-      children: [{
-        path: createGamePath[2],
-        element: <CreateGame />
-      }]
     }, {
-      path: managePath[1],
+      path: 'manage',
       element: <Manage />
     }, {
-      path: playPath[1],
+      path: 'play',
       element: <Play />
     }, {
-      path: accountPath[1],
+      path: 'account',
       element: <Account />
+    },{
+      path: 'create/game',
+      element: <CreateGame />
     }]
   }]
 }], {

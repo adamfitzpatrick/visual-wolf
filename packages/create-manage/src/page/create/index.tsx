@@ -1,4 +1,3 @@
-import { LinkOutlined } from '@ant-design/icons';
 import { EntitySymbol } from '../../atom/entity-symbol';
 import { GameSymbol } from '../../atom/game-symbol'
 import { MapSymbol } from '../../atom/map-symbol'
@@ -10,15 +9,15 @@ export const createPath = ['/authenticated', 'create'];
 export function Create() {
   return (
     <div className='create'>
-      <Link className='create__step create__step-game' to="/authenticate/create/game">
+      <Link className='create__step create__step-game' to="/authenticated/create/game">
         <div className='create__step-inner create__step-inner-game'>
-          <GameSymbol color="rgb(255, 0, 80)" size={8}/>
+          <GameSymbol color="rgb(255, 0, 80)" size={8} />
           <div className='create__step-title'>Game</div>
         </div>
       </Link>
       <button className='create__step create__step-map'>
         <div className='create__step-inner create__step-inner-map'>
-          <MapSymbol color="rgb(255, 33, 255)" size={8}/>
+          <MapSymbol color="rgb(255, 33, 255)" size={8} />
           <div className='create__step-title'>Map</div>
         </div>
       </button>

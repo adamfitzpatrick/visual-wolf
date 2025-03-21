@@ -1,26 +1,35 @@
+import classNames from "classnames";
 import { PropsWithoutRef } from "react";
+
+import './entity-symbol.css';
 
 export interface EntityProps {
   color?: string;
   size?: number;
+  glow?: boolean;
+  hoverGlow?: boolean;
 }
 
 export function EntitySymbol(props: PropsWithoutRef<EntityProps>) {
   const stroke = props.color || '#000000';
   const size = `${props.size || 10}rem`;
   const symbolStyle = { width: size };
+  const classes = classNames('entity-symbol', 'symbol', {
+    'symbol--glowing': props.glow,
+    'symbol--hover-glow': props.hoverGlow
+  })
 
   return (
     <svg
-      className='entity-symbol symbol'
+      className={classes}
       style={symbolStyle}
-    viewBox="-10 -5 150 160">
-    <defs>
-      <filter id="shadow-entity">
-        <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={stroke}/>
-      </filter>
-      <path
-        id="skull_path"
+      viewBox="-10 -5 150 160">
+      <defs>
+        <filter id="glow-entity">
+          <feDropShadow dx="0" dy="0" stdDeviation="7" floodColor={stroke} />
+        </filter>
+        <path
+          id="skull_path"
           transform="scale(1,.8)"
           fill={stroke}
           d="M 105,42
@@ -43,15 +52,15 @@ export function EntitySymbol(props: PropsWithoutRef<EntityProps>) {
             c -8,2 -18,0 -21,-6
             c -3,-8 5,-12 12,-17
             z"
-          />
-    </defs>
+        />
+      </defs>
       <g
-       className='symbol__shadowed'
+        className='symbol__glow-path'
         id="g2"
         transform="translate(-45,-30)">
-          <use href="#skull_path" />
-          <use href="#skull_path" transform="scale(-1,1),translate(-71,0)" transform-origin="center"/>
-          </g>
-          </svg>
+        <use href="#skull_path" />
+        <use href="#skull_path" transform="scale(-1,1),translate(-71,0)" transform-origin="center" />
+      </g>
+    </svg>
   )
 }

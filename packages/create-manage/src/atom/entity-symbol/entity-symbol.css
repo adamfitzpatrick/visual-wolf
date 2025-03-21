@@ -1,0 +1,7 @@
+.entity-symbol.symbol.symbol--glowing .symbol__glow-path {
+  filter: url(#glow-entity);
+}
+
+.entity-symbol.symbol.symbol--hover-glow:hover .symbol__glow-path {
+  filter: url(#glow-entity);
+}

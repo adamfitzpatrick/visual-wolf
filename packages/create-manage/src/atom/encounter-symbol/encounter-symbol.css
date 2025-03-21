@@ -1,0 +1,11 @@
+.symbol__transform-element {
+    transform-box: fill-box;
+}
+
+.encounter-symbol.symbol.symbol--glowing .symbol__glow-path {
+    filter: url(#glow-encounter);
+}
+
+.encounter-symbol.symbol.symbol--hover-glow:hover .symbol__glow-path {
+    filter: url(#glow-encounter);
+}

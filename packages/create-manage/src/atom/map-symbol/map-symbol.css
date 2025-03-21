@@ -1,0 +1,7 @@
+.map-symbol.symbol.symbol--glowing .symbol__glow-path {
+  filter: url(#glow-map);
+}
+
+.map-symbol.symbol.symbol--hover-glow:hover .symbol__glow-path {
+  filter: url(#glow-map);
+}

@@ -33,16 +33,16 @@
     0 0 5px 5px inset rgba(33, 99, 255, 0.3);
 }
 
-.create__step:hover.create__step-game .symbol .symbol__shadowed {
-  filter: url(#shadow-game);
+.create__step:hover .map-symbol.symbol {
+  filter: url(#glow-map);
 }
 
-.create__step:hover.create__step-map .symbol .symbol__shadowed {
-  filter: url(#shadow-map);
+.create__step:hover .game-symbol.symbol {
+  filter: url(#glow-game);
 }
 
-.create__step:hover.create__step-entity .symbol .symbol__shadowed {
-  filter: url(#shadow-entity);
+.create__step:hover .entity-symbol.symbol {
+  filter: url(#glow-entity);
 }
 
 .create__step-inner {

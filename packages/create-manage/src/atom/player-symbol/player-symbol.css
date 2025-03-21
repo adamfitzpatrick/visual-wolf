@@ -1,0 +1,7 @@
+.player-symbol.symbol.symbol--glowing .symbol__glow-path {
+  filter: url(#glow-player);
+}
+
+.player-symbol.symbol.symbol--hover-glow:hover .symbol__glow-path {
+  filter: url(#glow-player);
+}

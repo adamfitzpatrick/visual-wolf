@@ -1,3 +1,11 @@
 .game-symbol__dice-text {
   font-size: 3.5rem;
 }
+
+.game-symbol.symbol.symbol--glowing .symbol__glow-path {
+  filter: url(#glow-game);
+}
+
+.game-symbol.symbol.symbol--hover-glow:hover .symbol__glow-path {
+  filter: url(#glow-game);
+}
