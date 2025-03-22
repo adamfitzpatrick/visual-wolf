@@ -11,8 +11,6 @@ const AUTH_SCOPE         = 'openid';
 const AUTH_REDIRECT_URI  = process.env.REACT_APP_AUTH_REDIRECT;
 const LOGIN_URL = `${AUTH_ENDPOINT}?client_id=${AUTH_CLIENT_ID}&response_type=${AUTH_RESPONSE_TYPE}&scope=${AUTH_SCOPE}&redirect_uri=${AUTH_REDIRECT_URI}`;
 
-export const welcomePath = ['/'];
-
 export function Welcome() {
   const goLogin = () => {
     window.location.href = LOGIN_URL;

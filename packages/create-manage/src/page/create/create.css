@@ -1,6 +1,12 @@
 .create {
   width: 100%;
   height: 100%;
+  margin-top: 2rem;
+}
+
+.create-steps {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,6 +22,17 @@
   border-radius: 0.5rem;
   padding: 0;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.create__step.active {
+  .create__step-inner {
+    border: none;
+  }
+
+  .create__step-title {
+    display: none;
+  }
 }
 
 .create__step-game:hover {
@@ -57,6 +74,10 @@
 
 .create__step-inner-game {
   border: 2px solid rgb(255, 0, 80);
+}
+
+.create__step--small .create__step-inner {
+  border: none;
 }
 
 .create__step-inner-map {

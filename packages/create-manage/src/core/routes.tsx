@@ -3,15 +3,15 @@ import {
   LoaderFunction,
   redirect
 } from 'react-router-dom';
-import { createPath, Create } from '../page/create';
-import { welcomePath, Welcome } from '../page/welcome';
-import { loginPath, loginLoader } from '../page/login';
+import { Create } from '../page/create';
+import { Welcome } from '../page/welcome';
+import { loginLoader } from '../page/login';
 import { MainPanel } from '../molecule/main-panel';
 import { loadAuthState } from './auth-context';
-import { Manage, managePath } from '../page/manage';
-import { Play, playPath } from '../page/play';
-import { accountPath, Account } from '../page/account';
-import { CreateGame, createGamePath } from '../page/create-game';
+import { Manage } from '../page/manage';
+import { Play } from '../page/play';
+import { Account } from '../page/account';
+import { CreateGame } from '../page/create-game';
 
 const publicRouteLoader = async () => {
   const auth = loadAuthState();
@@ -29,37 +29,79 @@ const privateRouteLoader: LoaderFunction = async () => {
   return null;
 }
 
+export const routes = {
+  fq: '/',
+  index: '/',
+  login: {
+    fq: '/login',
+    index: 'login'
+  },
+  authenticated: {
+    fq: '/authenticated',
+    index: 'authenticated',
+    create: {
+      fq: '/authenticated/create',
+      index: 'create',
+      game: {
+        fq: '/authenticated/create/game',
+        index: 'game'
+      },
+      map: {
+        fq: '/authenticated/create/map',
+        index: 'map'
+      },
+      entity: {
+        fq: '/authenticated/create/entity',
+        index: 'entity'
+      }
+    },
+    manage: {
+      fq: '/authenticated/manage',
+      index: 'manage'
+    },
+    play: {
+      fq: '/authenticated/play',
+      index: 'play'
+    },
+    account: {
+      fq: '/authenticated/account',
+      index: 'account'
+    }
+  }
+}
+
 export const router = createBrowserRouter([{
-  path: welcomePath[0],
+  path: routes.index,
   element: <MainPanel />,
   children: [{
     index: true,
     element: <Welcome />,
     loader: publicRouteLoader
   }, {
-    path: loginPath[1],
+    path: routes.login.index,
     loader: loginLoader
   }, {
-    path: '/authenticated',
+    path: routes.authenticated.index,
     loader: privateRouteLoader,
     children: [{
       index: true,
-      loader: async () => redirect('/authenticated/create')
+      loader: async () => redirect(routes.authenticated.create.fq)
     }, {
-      path: 'create',
+      path: routes.authenticated.create.index,
       element: <Create />,
+      children: [{
+        path: routes.authenticated.create.game.index,
+        element: <CreateGame />
+      }]
     }, {
-      path: 'manage',
+      path: routes.authenticated.manage.index,
       element: <Manage />
     }, {
-      path: 'play',
+      path: routes.authenticated.play.index,
       element: <Play />
     }, {
-      path: 'account',
+      path: routes.authenticated.account.index,
       element: <Account />
-    },{
-      path: 'create/game',
-      element: <CreateGame />
     }]
   }]
 }], {

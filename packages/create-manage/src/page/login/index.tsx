@@ -4,8 +4,6 @@ import './login.css'
 import { LoaderFunction, redirect } from 'react-router-dom';
 import { saveAuthState } from '../../core/auth-context';
 
-export const loginPath = ['/', 'login'];
-
 interface CognitoJwtPayload {
   sub: string;
   email: string;

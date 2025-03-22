@@ -3,24 +3,22 @@ import { PropsWithoutRef } from 'react';
 import { Logo } from '../../atom/logo';
 import classnames from 'classnames';
 import { AuthState } from '../../core/auth-context';
-import { Link, useMatch, useMatches } from 'react-router-dom';
-import { createPath } from '../../page/create';
-import { managePath } from '../../page/manage';
+import { Link, useMatch, } from 'react-router-dom';
+import { routes } from '../../core/routes';
 
 import './header.css';
-import { playPath } from '../../page/play';
-import { accountPath } from '../../page/account';
 
 interface HeaderProps {
   authState?: AuthState
 }
 
-const toCreate = createPath.join('/');
-const toManage = managePath.join('/');
-const toPlay = playPath.join('/');
-const toAccount = accountPath.join('/');
 
 export function Header(props: PropsWithoutRef<HeaderProps>) {
+  const toCreate = routes.authenticated.create.fq;
+  const toManage = routes.authenticated.manage.fq;
+  const toPlay = routes.authenticated.play.fq
+  const toAccount = routes.authenticated.account.fq
+  
   function getClasses() {
     return classnames('header__active-marker', {
       'header__active-marker-create': useMatch(toCreate),
