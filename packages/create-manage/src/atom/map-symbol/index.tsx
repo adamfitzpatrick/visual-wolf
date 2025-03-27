@@ -11,7 +11,7 @@ export interface MapProps {
 
 export function MapSymbol(props: PropsWithoutRef<MapProps>) {
   const
-    stroke = props.color || '#000000';
+    stroke = props.color || 'rgb(255, 33, 255)';
   const size = `${props.size || 10}rem`;
   const symbolStyle = { width: size };
   const classes = classNames('map-symbol', 'symbol', {

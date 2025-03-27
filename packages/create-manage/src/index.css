@@ -6,6 +6,9 @@ body {
 }
 
 :root {
+  --long-anim-duration: 0.4s;
+  --short-anim-duration: 0.2s;
+
   margin: 0;
   padding: 0;
 

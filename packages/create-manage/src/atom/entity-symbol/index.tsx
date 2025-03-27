@@ -11,7 +11,7 @@ export interface EntityProps {
 }
 
 export function EntitySymbol(props: PropsWithoutRef<EntityProps>) {
-  const stroke = props.color || '#000000';
+  const stroke = props.color || 'rgb(33, 99, 255)';
   const size = `${props.size || 10}rem`;
   const symbolStyle = { width: size };
   const classes = classNames('entity-symbol', 'symbol', {

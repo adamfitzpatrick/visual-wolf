@@ -92,6 +92,9 @@ export const router = createBrowserRouter([{
       children: [{
         path: routes.authenticated.create.game.index,
         element: <CreateGame />
+      }, {
+        path: routes.authenticated.create.map.index,
+        element: <CreateGame />
       }]
     }, {
       path: routes.authenticated.manage.index,

@@ -3,7 +3,7 @@ import { PropsWithoutRef } from 'react';
 import { Logo } from '../../atom/logo';
 import classnames from 'classnames';
 import { AuthState } from '../../core/auth-context';
-import { Link, useMatch, } from 'react-router-dom';
+import { Link, NavLink, useMatch, } from 'react-router-dom';
 import { routes } from '../../core/routes';
 
 import './header.css';
@@ -33,10 +33,10 @@ export function Header(props: PropsWithoutRef<HeaderProps>) {
       return (
         <div className='header__menu'>
           <div className={getClasses()} />
-          <Link className='header__menu-item' to={toCreate} relative='route'>create</Link>
-          <Link className='header__menu-item' to={toManage}>manage</Link>
-          <Link className='header__menu-item' to={toPlay}>play</Link>
-          <Link className='header__menu-item' to={toAccount}><UserOutlined /></Link>
+          <NavLink className='header__menu-item' to={toCreate}>create</NavLink>
+          <NavLink className='header__menu-item' to={toManage}>manage</NavLink>
+          <NavLink className='header__menu-item' to={toPlay}>play</NavLink>
+          <NavLink className='header__menu-item' to={toAccount}><UserOutlined /></NavLink>
         </div>
       )
     } else {

@@ -11,7 +11,7 @@ export interface PlayerSymbolProps {
 }
 
 export function PlayerSymbol(props: PropsWithoutRef<PlayerSymbolProps>) {
-    const primaryColor = props.color || '#ffffff';
+    const primaryColor = props.color || 'rgb(0, 225, 0)';
     const size = `${props.size || 10}rem`;
     const symbolStyle = { width: size };
     const classes = classNames('player-symbol', 'symbol', {

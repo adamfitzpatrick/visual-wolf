@@ -1,7 +1,3 @@
-.game-symbol {
-  transition: 1s width ease-in-out;
-}
-
 .game-symbol__dice-text {
   font-size: 3.5rem;
 }

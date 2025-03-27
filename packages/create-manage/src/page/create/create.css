@@ -1,93 +1,71 @@
+@keyframes hide-symbol {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    width: 10rem;
+    height: 11rem;
+  }
+
+  100% {
+    opacity: 0;
+    width: 6rem;
+    height: 11rem;
+  }
+}
+
+@keyframes shrink-guide {
+  100% {
+    width: 20rem;
+    height: 6rem;
+  }
+}
+
+@keyframes reorder {
+  100% {
+    order: 1;
+  }
+}
+
 .create {
   width: 100%;
-  height: 100%;
-  margin-top: 2rem;
-}
-
-.create-steps {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  height: calc(100% - 5rem);
+  padding: 2rem;
   box-sizing: border-box;
-  padding: 0 6rem;
-}
 
-.create__step {
-  font-size: 2rem;
-  color: rgb(255, 255, 255);
-  background: transparent;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: none;
-}
+  .creation-guide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-.create__step.active {
-  .create__step-inner {
-    border: none;
+    &.creating {
+      animation: var(--long-anim-duration) ease-in-out both shrink-guide;
+
+    }
+
+    &.create-no-anim {
+      width: 20rem;
+      height: 6rem;
+    }
+
+    &.end-creating {
+      animation: var(--long-anim-duration) ease-in-out both reverse shrink-guide;
+    }
+
+    .create-symbol-step {
+
+      &.vanishing {
+        animation: var(--long-anim-duration) linear both hide-symbol;
+      }
+
+      &.appearing {
+        animation: var(--long-anim-duration) linear reverse hide-symbol;
+      }
+    }
   }
-
-  .create__step-title {
-    display: none;
-  }
-}
-
-.create__step-game:hover {
-  box-shadow: 0 0 5px 5px rgba(255, 0, 80, 0.3),
-    0 0 5px 5px inset rgba(255, 0, 80, 0.3);
-}
-
-.create__step-map:hover {
-  box-shadow: 0 0 5px 5px rgba(255, 33, 255, 0.3),
-    0 0 5px 5px inset rgba(255, 33, 255, 0.3);
-}
-
-.create__step-entity:hover {
-  box-shadow: 0 0 5px 5px rgba(33, 99, 255, 0.3),
-    0 0 5px 5px inset rgba(33, 99, 255, 0.3);
-}
-
-.create__step:hover .map-symbol.symbol {
-  filter: url(#glow-map);
-}
-
-.create__step:hover .game-symbol.symbol {
-  filter: url(#glow-game);
-}
-
-.create__step:hover .entity-symbol.symbol {
-  filter: url(#glow-entity);
-}
-
-.create__step-inner {
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 13rem;
-  height: 15rem;
-}
-
-.create__step-inner-game {
-  border: 2px solid rgb(255, 0, 80);
-}
-
-.create__step--small .create__step-inner {
-  border: none;
-}
-
-.create__step-inner-map {
-  border: 2px solid rgb(255, 33, 255);
-}
-
-.create__step-inner-entity {
-  border: 2px solid rgb(33, 99, 255);
-}
-
-.create__step-title {
-  margin-top: 2rem;
 }
